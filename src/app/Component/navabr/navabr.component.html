@@ -1,0 +1,69 @@
+<!--NAVBAR-->
+<mat-toolbar color="primary" style="background-color: rgba(46, 60, 84, 255)">
+  <mat-toolbar-row style="min-height: 40px; height: 40px">
+    <img src="../../assets/images/logo.png" style="height: 20px; width: 150px" alt="cozentus-logo" />
+    <span class="example-spacer"></span>
+    <div class="logo ml-auto justify-content-spacearound" style="display: flex">
+      <div class="circle">
+        <span class="dot mr-2"
+          style="color: white; margin-top: 10px; text-align: center; width: 30px; height: 30px; line-height: 30px;">GB</span>
+      </div>
+      <div class="name">
+        <h4 style="
+              color: white;
+              font-weight: 100;
+              margin-top: 13px;
+              margin-left: 4px;
+              font-size: 17px;
+            " class="mr-2">
+          Gourish Bhagat
+        </h4>
+      </div>
+      <div class="downlogo">
+        <img src="../../assets/images/down.png" style="
+              height: 10px;
+              width: 12px;
+              filter: brightness(0) invert(1);
+              margin-left: 4px;
+              margin-top: 19px;
+            " alt="down-logo" />
+      </div>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row style="min-height: 40px; height: 40px">
+    <span>
+      <button mat-stroked-button style="background-color: transparent; color: white; border: none"
+        (click)="toggleDropdown()">
+        <img src="../../assets/images/courses.png" class="img mx-2" alt="home" />Courses<img
+          src="../../assets/images/drop.png" style="height: 10px; width: 10px; filter: brightness(0) invert(1);"
+          class="mx-2">
+      </button>
+      <ul class="dropdown-menu" [ngStyle]="{ display: isDropdownOpen ? 'block' : 'none' }">
+        <li class="dropdown-item">
+          <a routerLink="/course" class="nav-link">Courses</a>
+        </li>
+        <li class="dropdown-item">
+          <a routerLink="/program" class="nav-link">Programs</a>
+        </li>
+      </ul>
+    </span>
+    <button mat-stroked-button style="background-color: transparent; color: white; border: none; margin-left: 10px;"
+      routerLink="/batch">
+      <img src="../../assets/images/batch.png" class="img mx-2" alt="batch" />Batch
+    </button>
+    <button mat-stroked-button style="background-color: transparent; color: white; border: none; margin-left: 10px;"
+      routerLink="/teacher">
+      <img src="../../assets/images/teacher.png" class="img mx-2" alt="assignment" />Teachers
+    </button>
+    <button mat-stroked-button style="background-color: transparent; color: white; border: none; margin-left: 10px;"
+      routerLink="/student">
+      <img src="../../assets/images/student.png" class="img mx-2" alt="student" />Students
+    </button>
+    <span style="margin-left: auto;"></span>
+    <button mat-stroked-button style="background-color: transparent; color: white; border: none; margin-right: 10px;"
+      (click)="logout()">
+      <img src="../../assets/images/logout.png" class="img mx-2" alt="logout" />Logout
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
